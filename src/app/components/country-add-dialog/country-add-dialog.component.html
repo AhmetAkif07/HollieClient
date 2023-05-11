@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>
+    {{ translocoService.translate('dialogs.add_button', { name: translocoService.getActiveLang() === 'en' ? 'Country' : 'Ülke' }) }}
+</h1>
+
+<div mat-dialog-content>
+
+
+    <mat-form-field>
+      <mat-label>{{ 'code' | transloco }}</mat-label>
+      <input matInput maxlength="20" [(ngModel)]="countryCode" (keyup.enter)="add()">
+    </mat-form-field>
+<br>
+<mat-form-field>
+        <mat-label>{{ 'name' | transloco }}</mat-label>
+        <input matInput maxlength="50" [(ngModel)]="countryName" (keyup.enter)="add()">
+    </mat-form-field>
+    <br>
+
+</div>
+
+<div mat-dialog-actions>
+    <!-- Todo: Click Events -->
+    <button mat-flat-button color="primary" (click)="add()">Add</button>
+    <button mat-flat-button color="accent" mat-dialog-close>Cancel</button>
+</div>

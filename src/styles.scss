@@ -1,0 +1,151 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$HollieClient-primary: mat.define-palette(mat.$blue-palette);
+$HollieClient-accent: mat.define-palette(mat.$orange-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$HollieClient-warn: mat.define-palette(mat.$red-palette);
+
+$HollieClient-excel: mat.define-palette(mat.$green-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$HollieClient-theme: mat.define-light-theme((color: (primary: $HollieClient-primary,
+        accent: $HollieClient-accent,
+        warn: $HollieClient-warn,
+      ),
+    ));
+
+$HollieClient-typography: mat-typography-config($font-family: "'Kanit', sans-serif");
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($HollieClient-theme);
+@include angular-material-typography($HollieClient-typography);
+
+/* You can add global styles to this file, and also import other style files */
+
+$app-theme: mat.define-light-theme((color: (primary: $HollieClient-primary,
+        accent: $HollieClient-accent,
+        warn: $HollieClient-warn,
+      )));
+
+$app-dark-theme: mat.define-dark-theme((color: (primary: $HollieClient-primary,
+        accent: $HollieClient-accent,
+        warn: $HollieClient-warn,
+      )));
+
+.darkMode {
+  @include mat.all-component-themes($app-dark-theme);
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.new-button {
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: none !important;
+  height: 4vw;
+}
+
+mat-form-field {
+  width: 20vw;
+}
+
+::ng-deep {
+  .mat-column-actions {
+    text-align: center;
+  }
+}
+
+.price-input {
+  text-align: right;
+}
+
+input.price-input::-webkit-outer-spin-button,
+input.price-input::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.price-input {
+  -moz-appearance: textfield;
+}
+
+.datepicker+.datepicker {
+  margin-left: 5px;
+}
+
+mat-form-field.selects-m {
+  width: 10vw;
+}
+
+.selects-m+.selects-m {
+  margin-left: 5px !important;
+}
+
+.mat-excel {
+  color: white;
+  background-color: #1D6F42;
+  // transform: rotate(180deg);
+}
+
+.price-field {
+  width: 12vw;
+}
+
+.currency-field {
+  width: 8vw;
+}
+
+.price-field .mat-form-field-appearance-fill,
+.price-field .mat-form-field-flex {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.currency-field .mat-form-field-appearance-fill,
+.currency-field .mat-form-field-flex {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.excel-button{
+  margin-left: 5px !important;
+}

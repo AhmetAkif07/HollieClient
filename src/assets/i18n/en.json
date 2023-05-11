@@ -1,0 +1,82 @@
+{
+    "home_title": "Homepage",
+    "agency_title": "Agencies",
+    "country_title": "Countries",
+    "hotel_title": "Hotels",
+    "hotel_category_title": "Hotel Categories",
+    "room_type_title": "Room Types",
+    "market_title": "Markets",
+    "board_title": "Boards",
+    "room_title": "Rooms",
+    "room": "Rooms",
+    "contract_title": "Contracts",
+    "currency_title": "Currencies",
+    "search_contract": "Search Contract",
+    "search": "Search",
+    "results": "Results",
+    "Total-price": "Total price",
+    "Per-price": "Per/Price",
+    "navbar": {
+        "change_language": "Change Language"
+    },
+    "home": {
+        "home_paragraph": "Welcome to Hollie!",
+        "see_more": "See More..."
+    },
+    "error": {
+        "error_text": "The page you are looking for cannot be found.",
+        "error_go_home": "Homepage"
+    },
+    "languages": {
+        "tr": "Turkish",
+        "en": "English"
+    },
+    "dialogs": {
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "update": "Update",
+        "edit": "Edit",
+        "add": "Add",
+        "add_button": "Add New {{ name }}",
+        "excel_button": "Download Excel",
+        "delete_title": "Are you sure to delete the \"{{ elementName }}\" element?",
+        "delete_text": "This will delete all the element's datas and cannot be undone.",
+        "edit_title": "Update {{ name }}",
+        "error_same": "Please type another {{ name }} data",
+        "error_email": "Please type a valid email",
+        "error_phone": "Please type a valid phone",
+        "error_required": "Please type the blank areas",
+        "error_date": "Enter date should be lower.",
+        "update_success": "{{ elementName }} successfully updated.",
+        "add_success": "{{ elementName }} successfully added to your table.",
+        "delete_success": "{{ elementName }} successfully deleted.",
+        "update_currency": "Update Currency"
+    },
+    "name": "Name",
+    "bed": "Yatak",
+    "slot": "Slot",
+    "address": "Address",
+    "phone": "Phone",
+    "code": "Code",
+    "email": "Email",
+    "actions": "Actions",
+    "category": "Category",
+    "country": "Country",
+    "agency": "Agency",
+    "board": "Board",
+    "currency": "Currency",
+    "hotel": "Hotel",
+    "market": "Market",
+    "room_type": "Room Type",
+    "price": "Price",
+    "adultPrice": "Adult Price",
+    "childPrice": "Child Price",
+    "start": "Start Date",
+    "end": "End Date",
+    "value": "Value",
+    "adult": "Adult",
+    "child": "Child",
+    "childAge": "Child Age"
+
+
+}

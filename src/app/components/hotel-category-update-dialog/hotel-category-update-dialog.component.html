@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>
+    {{ translocoService.translate('dialogs.edit_title', { name: translocoService.getActiveLang() === 'en' ? 'Hotel Category' : 'Otel Tipi' }) }}
+</h1>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>{{ 'code' | transloco }}</mat-label>
+        <input matInput maxlength="20" [(ngModel)]="newCategoryCode" (keyup.enter)="update()">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>{{ 'name' | transloco }}</mat-label>
+        <input matInput maxlength="50" [(ngModel)]="newCategoryName" (keyup.enter)="update()">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-flat-button color="primary" (click)="update()">{{ 'dialogs.update' | transloco }}</button>
+    <button mat-flat-button color="accent" mat-dialog-close>{{ 'dialogs.cancel' | transloco }}</button>
+</div>
